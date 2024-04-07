@@ -3,7 +3,7 @@ Here's a simple step-by-step summary of the information gathering phase in cyber
 1. Whois Lookup - Find info about the owner of the target.
 → http://whois.domaintools.com/
 
-https://github.com/enigaman/Unveiling-Securing-File-Uploads-A-Guide-for-Ethical-Hackers/issues/1#issue-2229754429
+![Screenshot](https://github.com/enigaman/Unveiling-Securing-File-Uploads-A-Guide-for-Ethical-Hackers/assets/166228564/e251e246-5c0d-4f1d-b28d-6dc3beb5d6ca)
 
 - Start with WHOIS Lookup: Use WHOIS lookup to gather essential details about the target's IP address, domain name, technologies, server specifications, and company information.
 - Retrieve Domain Information: Collect information like email contacts, domain creation date, IP address, IP location, domain status, and details about the web server software (e.g., Apache) version.
