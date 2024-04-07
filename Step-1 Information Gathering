@@ -1,9 +1,60 @@
 Here's a simple step-by-step summary of the information gathering phase in cybersecurity: 
 
-1. Start with WHOIS Lookup: Use WHOIS lookup to gather essential details about the target's IP address, domain name, technologies, server specifications, and company information.
-2. Retrieve Domain Information: Collect information like email contacts, domain creation date, IP address, IP location, domain status, and details about the web server software (e.g., Apache) version.
-3. Analyze Privacy Settings: Check if the domain uses privacy protection, which may hide specific details such as company addresses.
-4. Identify Web Server and OS: Note the web server software (e.g., Apache), its version (e.g., 2.20.31), the operating system (e.g., UNIX), and any additional add-ons (e.g., mod SSL, open SSL).
-5. Explore Hosting Providers: Identify the hosting provider (e.g., Dim Enough Dot Net) to understand more about their services and infrastructure.
-6. Analyze Name Servers: Note the name servers being used, as they can provide insights into hosting and infrastructure providers.
-5. This process aids in understanding the target's digital presence, technology stack, and potential areas for security assessment or exploitation.
+1. Whois Lookup - Find info about the owner of the target.
+→ http://whois.domaintools.com/
+
+- Start with WHOIS Lookup: Use WHOIS lookup to gather essential details about the target's IP address, domain name, technologies, server specifications, and company information.
+- Retrieve Domain Information: Collect information like email contacts, domain creation date, IP address, IP location, domain status, and details about the web server software (e.g., Apache) version.
+- Analyze Privacy Settings: Check if the domain uses privacy protection, which may hide specific details such as company addresses.
+- Identify Web Server and OS: Note the web server software (e.g., Apache), its version (e.g., 2.20.31), the operating system (e.g., UNIX), and any additional add-ons (e.g., mod SSL, open SSL).
+- Explore Hosting Providers: Identify the hosting provider (e.g., Dim Enough Dot Net) to understand more about their services and infrastructure.
+- Analyze Name Servers: Note the name servers being used, as they can provide insights into hosting and infrastructure providers.
+- This process aids in understanding the target's digital presence, technology stack, and potential areas for security assessment or exploitation.
+
+2. Netcraft Site Report - Shows technologies used on the target.
+→ http://toolbar.netcraft.com/site_report?url=
+
+- Access Netcraft: Visit the Netcraft website to gather insights into the target's technologies.
+- Review Basic Details: Check essential information such as the website's title, description, creation date, IP address, domain registrar, and hosting location.
+- Identify Hosting Provider and History: Determine the hosting provider, examine hosting history, and note server operating system (e.g., Linux), web server software (e.g., Apache), and related add-ons.
+- Evaluate Spam and Web Tracking: Look for spam indicators and discover third-party resources like Google services integrated into the website.
+- Analyze Technologies Used: Explore the "Technologies" section to understand server-side technologies (e.g., PHP support), client-side technologies (e.g., JavaScript), and web applications used (e.g., WordPress, CPanel).
+- Explore Exploit Opportunities: Use the gathered information to search for exploits or vulnerabilities relevant to identified technologies (e.g., WordPress exploits) on platforms like Exploit Database.
+- This process aids in comprehending the target's technology stack, identifying potential vulnerabilities, and exploring exploit opportunities.
+
+3. Robtex DNS lookup - Shows comprehensive info about the target website.
+→ https://www.robtex.com/
+
+- Access Robtex DNS Lookup: Visit the Robtex website to gather comprehensive information about the target website
+- Understand Server Structure: Recognize that multiple websites can reside on the same server, sharing the server's IP address.
+- Exploit Server Access: If unable to find vulnerabilities in the target website, attempt to hack into another website on the same server.
+- Gain Server Access: Accessing the server grants control over all websites hosted on it, including the target website.
+- Identify Shared IP Addresses: Use tools like Ping or search engines like Bing to identify websites sharing the same IP address as the target.
+- Navigate Between Websites: Once access is gained to one website on the server, navigate to other websites hosted on the same server to potentially reach the target website.
+- This method leverages shared server resources to gain access to the desired website if direct vulnerabilities are challenging to exploit.
+
+4.  Discovering Subdomains: here we are going to use python3 tool called - knockpy  i.e Knockpy is a portable and modular python3 tool designed to quickly enumerate subdomains on a target domain through passive reconnaissance and dictionary scan.
+
+- Understand Domains and Subdomains: Domains like target.com are the main addresses for websites, while subdomains are prefixes like subdomain.target.com.
+- Importance of Subdomains: Subdomains offer access to different web applications, sensitive data, management pages, beta versions, and experimental features.
+- Benefits of Discovering Subdomains: Discovering subdomains expands the attack surface, increases chances of finding vulnerabilities in underdeveloped parts, and aids in gaining access to the target server.
+- Use of Tools: Utilize tools like Knock to automatically discover subdomains by entering the tool's name followed by the target website (e.g., knock google.com).
+- Results Analysis: Review the results to identify discovered subdomains, such as admin.google.com, accounts.google.com, and others, to target for vulnerability assessment and exploitation.
+- This approach helps in systematically discovering subdomains, which can lead to identifying vulnerabilities and gaining access to the target server.
+
+Steps to Download Knockpy: 
+
+Download Knock: 
+
+1. Clone the repository using the following command: git clone https://github.com/guelfoweb/knock.git
+2. Navigate to Knock Directory: Change to the Knock directory where the knock.py script is located: cd knock
+3. Run Knock: Execute Knock with the target domain to find its subdomains: python knock.py [target] 
+
+Replace [target] with the domain you want to discover subdomains for, such as python knock.py google.com
+
+
+
+
+
+
+
