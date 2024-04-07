@@ -52,7 +52,22 @@ Download Knock:
 
 Replace [target] with the domain you want to discover subdomains for, such as python knock.py google.com
 
+5. Discovering Sensitive Files -  here we are going to use  Kali Linux tool called - dirb  i.e Find files & directories in target website.
 
+- Understanding File and Directory Structure: Get familiar with the structure of directories on a web server, where files and directories can contain sensitive information like passwords and configuration details.
+- Identify Target Directory: Determine the target directory within the web server where hidden files and directories might be located.
+- Use of Dirb Tool: Utilize the Dirb tool to perform a brute-force attack, searching for files and directories based on a provided word list.
+- Options and Configuration: Explore the options available in Dirb, such as disabling recursion, prompting for directory access, handling authentication, enabling verbose output, and specifying output file locations.
+- Execution Example: Run Dirb with the target URL (in HTTP format) and the specific directory to search for files and directories within that target directory.
+- This approach helps in systematically discovering hidden files and directories on the target website, potentially containing valuable information for further exploitation.
+
+Usage:
+
+dirb [target] [wordlist] [options] 
+
+For more information, run:
+
+man dirb
 
 
 
