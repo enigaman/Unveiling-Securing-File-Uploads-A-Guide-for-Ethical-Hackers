@@ -5,6 +5,8 @@ Here's a simple step-by-step summary of the information gathering phase in cyber
 
 
 
+
+
 - Start with WHOIS Lookup: Use WHOIS lookup to gather essential details about the target's IP address, domain name, technologies, server specifications, and company information.
 - Retrieve Domain Information: Collect information like email contacts, domain creation date, IP address, IP location, domain status, and details about the web server software (e.g., Apache) version.
 - Analyze Privacy Settings: Check if the domain uses privacy protection, which may hide specific details such as company addresses.
@@ -70,6 +72,8 @@ dirb [target] [wordlist] [options]
 For more information, run:
 
 man dirb
+
+
 
 
 
